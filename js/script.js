@@ -39,4 +39,12 @@ function showList(array) {
 document.addEventListener("DOMContentLoaded", (e) => {
   // Escribe tu solución aquí
   // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  
+  const nuevoArreglo = strangeArray.filter((elemento) => typeof elemento == "string");
+  nuevoArreglo.sort(function comparar (element1, element2){
+    return element1.localeCompare(element2);
+  });
+  
+  showList(nuevoArreglo);
+
 });
